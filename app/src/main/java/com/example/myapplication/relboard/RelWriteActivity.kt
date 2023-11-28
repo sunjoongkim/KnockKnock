@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.example.myapplication.R
+import com.example.myapplication.adress.AddressSearchActivity
 import com.example.myapplication.databinding.ActivityRelWriteBinding
 import com.example.myapplication.utils.FBAuth
 import com.example.myapplication.utils.FBRef
@@ -16,7 +17,6 @@ class RelWriteActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_rel_write)
-
 
         binding.writeBtn.setOnClickListener {
 

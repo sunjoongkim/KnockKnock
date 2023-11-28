@@ -3,32 +3,28 @@ package com.example.myapplication.fragment
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.webkit.WebView
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.Banner_Inside
 import com.example.myapplication.R
-import com.example.myapplication.adress.WebViewActivity
 import com.example.myapplication.board2.BoardWriteActivity
 import com.example.myapplication.contentsList.BookmarkRVAdapter
 import com.example.myapplication.contentsList.ContentModel
 import com.example.myapplication.contentsList.ContentsListActivity
 import com.example.myapplication.databinding.FragmentHomeBinding
 import com.example.myapplication.rel_build.Rel_Random_Activity
-import com.example.myapplication.rel_region.Jeonse_seoul_Activity
 import com.example.myapplication.rel_region.Rel_Category_Activity
-import com.example.myapplication.relboard.RelWriteActivity
 import com.example.myapplication.utils.FBRef
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
+import com.tlsolution.tlsaddresssearchhelper.AddressSearchHelper
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -67,6 +63,12 @@ class HomeFragment : Fragment() {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
 
+        binding.searchAddressView.setOnClickListener {
+            val addressSearchHelper = AddressSearchHelper(requireActivity())
+            addressSearchHelper.confmKey = resources.getString(R.string.juso_key)
+
+            addressSearchHelper.startSearchingAddress()
+        }
 
         binding.eventbanner1.setOnClickListener {
             val intent = Intent(context, Banner_Inside::class.java)

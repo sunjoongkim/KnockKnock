@@ -5,6 +5,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +15,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        tools:replace="android:theme"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
@@ -232,6 +236,13 @@
         <activity
             android:name=".BoardListActivity"
             android:exported="false" />
+        <activity
+            android:name="com.tlsolution.tlsaddresssearchhelper.AddressExampleActivity"
+            android:exported="true"/>
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="7b03f29946e5bad05d5215df3c7c66bd" />
     </application>
 
 </manifest>

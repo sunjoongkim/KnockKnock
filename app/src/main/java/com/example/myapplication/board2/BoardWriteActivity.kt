@@ -1,5 +1,6 @@
 package com.example.myapplication.board2
 
+import android.app.Activity
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.graphics.Bitmap
@@ -8,12 +9,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.NumberPicker
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.databinding.DataBindingUtil
 import com.example.myapplication.R
+import com.example.myapplication.adress.AddressSearchActivity
 import com.example.myapplication.contentsList.BookmarkModel
+import com.example.myapplication.databinding.ActivityAddressSearchBinding
 import com.example.myapplication.databinding.ActivityBoardWriteBinding
 import com.example.myapplication.utils.FBAuth
 import com.example.myapplication.utils.FBRef
@@ -38,6 +43,31 @@ class BoardWriteActivity : AppCompatActivity() {
 
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_board_write)
+
+
+        // 주소 입력값을 addressArea 에 작성
+        val addressResultLauncher = registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()
+        ) { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+
+                val intent = result.data
+                val address = intent?.getStringExtra("address")
+                if (address != null) {
+                    binding.address1Area.visibility = View.VISIBLE
+                    binding.address1Area.setText(address)
+                    binding.address2Area.setHint("나머지 주소를 입력하세요.")
+                }
+
+            }
+        }
+
+        // 주소 검색 페이지 이동
+        binding.btnSearchAddress.setOnClickListener {
+            val intent = Intent(this, AddressSearchActivity::class.java)
+            addressResultLauncher.launch(intent)
+        }
+
 
         // 스피너 유형 추가
         val cities = arrayOf("지역을 선택해주세요","서울", "인천", "경기", "부산", "지방") // 필요한 만큼 도시를 추가합니다
@@ -91,7 +121,7 @@ class BoardWriteActivity : AppCompatActivity() {
             //8. buildingType 변수 생성 - 건물 유형
             val building = binding.buildingTypeArea.selectedItem.toString()
 
-            val adress = binding.adressArea.text.toString()
+            val address = binding.address1Area.text.toString() + " " + binding.address2Area.text.toString()
 
             val floor1 = binding.floorArea1.text.toString()
             val floor2 = binding.floorArea2.text.toString()
@@ -111,22 +141,13 @@ class BoardWriteActivity : AppCompatActivity() {
 
             val tel = binding.telArea.text.toString()
 
-
-
-
-
-
-
-
-
-
             val key = FBRef.boardRef2.push().key.toString()
 
             //boardRef2 데이터베이스 테이블 안에 key값 넣고(key값을 만들어주는 이유: title , content, uid 이런게 너무 많으니까
             //얘내 여러개를 묶어서 나중에 key라는 값으로 한번에 정의할수있으니 좀 간단하게 할수있겠쥬??) 그리고 그 하위에 title,content등 입력
             FBRef.boardRef2
                 .child(key) // 랜덤Key값 생성
-                .setValue(BoardModel2(title,content,uid,time,mprice,yprice,fee,renum,rent,building,adress, floor1, floor2, complexname, roomnumber, bathnumber, temp, acreageArea1, acreageArea2, tenant, tel))
+                .setValue(BoardModel2(title,content,uid,time,mprice,yprice,fee,renum,rent,building, address, floor1, floor2, complexname, roomnumber, bathnumber, temp, acreageArea1, acreageArea2, tenant, tel))
 
             Toast.makeText(this, "개인 매물 작성 완료", Toast.LENGTH_SHORT).show()
 
