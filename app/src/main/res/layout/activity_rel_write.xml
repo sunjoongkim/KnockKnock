@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".board.BoardWriteMainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <TextView
+                    android:textSize="20dp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:text="나의 매물 등록하기" />
+            </LinearLayout>
+            <View android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:text="매물의 정보를"
+                android:textSize="25dp"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:text="입력해주세요"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="25dp" />
+            <View android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="매물유형"
+                android:textSize="20dp"/>
+            <View android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+            <Spinner
+                android:id="@+id/et_buildingtype"
+                android:layout_width="360dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.308"
+                />
+            <TextView
+                android:id="@+id/newTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:text="전/월세 유형"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <Spinner
+                android:id="@+id/et_renttype"
+                android:layout_width="360dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.308"
+                />
+            <View android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="지역"
+                android:textSize="20dp"/>
+            <Spinner
+                android:id="@+id/et_renum"
+                android:layout_width="360dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.236"
+                />
+            <View android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="월/전세 가격"
+                android:textSize="20dp"/>
+            <View android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+
+            <EditText
+                android:id="@+id/et_mprice"
+                android:layout_width="360dp"
+                android:background="@android:color/transparent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:hint="매물월세"
+                android:padding="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.564"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.071"
+                />
+            <View android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="보증금"
+                android:textSize="20dp"/>
+            <View android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+
+            <EditText
+                android:id="@+id/et_yprice"
+                android:layout_width="360dp"
+                android:background="@android:color/transparent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:hint="매물보증금"
+                android:padding="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.564"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.071"
+                />
+            <View android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="관리비"
+                android:textSize="20dp"/>
+            <View android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+
+            <EditText
+                android:id="@+id/et_fee"
+                android:layout_width="360dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="관리비"
+                android:padding="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.564"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.071"
+                />
+
+            <View android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+
+
+            <EditText
+                android:id="@+id/titleArea"
+                android:hint="제목을 입력하세요"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="60dp" />
+
+            <ImageView
+                android:id="@+id/imageArea"
+                android:src="@drawable/plusbtn"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:layout_width="350dp"
+                android:layout_height="130dp" />
+
+            <EditText
+                android:id="@+id/contentArea"
+                android:hint="내용을 입력하세요"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <Button
+                android:id="@+id/writeBtn"
+                android:text="작성하기"
+                android:layout_marginLeft="250dp"
+                android:background="@drawable/background_radius_yellow"
+                android:layout_width="150dp"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

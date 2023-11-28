@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="30dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="매물 카테고리"
+                android:textColor="@color/black"
+                android:gravity="center" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="30dp"
+                android:src="@drawable/img_banner1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:text="▼ 월전세/지역별"
+                android:textColor="@color/black"
+                android:gravity="" />
+            <View
+                android:layout_marginTop="5dp"
+                android:background="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/Month_seoul"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="월세·서울" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/Month_gyeongi"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="월세·경기" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/Month_incheon"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="월세·인천" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/Month_province"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="월세·지방" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+
+                <TextView
+                    android:id="@+id/jeonse_seoul"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:onClick="onJeonseSeoulClicked"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="전세·서울" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/jeonse_gyeongi"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="전세·경기" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/jeonse_incheon"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="전세·인천" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/jeonse_province"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="전세·지방" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/res_seoul"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="매매·서울" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/res_gyeongi"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="매매·경기" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/res_incheon"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="매매·인천" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/res_province"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="매매·지방" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:text="▼ 건물유형/지역별"
+                android:textColor="@color/black"
+                android:gravity="" />
+            <View
+                android:layout_marginTop="5dp"
+                android:background="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/oneroom_seoul"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="원룸·서울" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/oneroom_gyeongi"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="원룸·경기" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/oneroom_incheon"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="원룸·인천" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/oneroom_province"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="원룸·지방" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/apart_seoul"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="아파트·서울" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/apart_gyeongi"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="아파트·경기" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/apart_incheon"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="아파트·인천" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/apart_province"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="아파트·지방" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/opi_seoul"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="오피스텔·서울" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/opi_gyeongi"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="오피스텔·경기" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/opi_incheon"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="오피스텔·인천" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/opi_province"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="오피스텔·지방" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:text="▼ 상가-업종별"
+                android:textColor="@color/black"
+                android:gravity="" />
+            <View
+                android:layout_marginTop="5dp"
+                android:background="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/Complex_Rest_Activity"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="음식점, 식당 매장" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/Complex_cafe_Activity"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="카페, 바 매장" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/Complex_shopping_Activity"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="의류, 미용실 매장 	" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/Complex_convenience_Activity"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="편의점, 마트 등 편의시설 매장" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/Complex_play_Activity"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="PC방, 노래방, 당구장 " />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/btn_paper"/>
+                <TextView
+                    android:id="@+id/Complex_helth_Activity"
+                    android:textColor="@color/black"
+                    android:gravity=""
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="헬스장, 운동시설 매장 " />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

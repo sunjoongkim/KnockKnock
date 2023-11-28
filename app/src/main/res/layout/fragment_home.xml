@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.HomeFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbarSize="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal">
+                    <SearchView
+                        android:layout_width="350dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/gray"
+                        android:layout_marginTop="10dp"
+                        android:queryHint="어떤 지역을 찾고 있나요?"
+                        app:iconifiedByDefault="false"
+                        app:queryBackground="@android:color/transparent"></SearchView>
+
+
+                </LinearLayout>
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:addStatesFromChildren="false"
+                    android:background="#FAF9F9"
+                    android:clickable="false"
+                    android:fillViewport="false">
+
+                    <LinearLayout
+                        android:layout_width="412dp"
+                        android:layout_height="45dp"
+                        android:paddingTop="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="horizontal"
+                        android:padding="0dp">
+
+                        <TextView
+                            android:id="@+id/textView_top1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:paddingTop="3dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="15dp"
+                            android:text="투데이" />
+
+                        <TextView
+                            android:id="@+id/textView_top2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="15dp"
+                            android:text="오늘의 매물"
+                            android:textColor="#AAAAAA" />
+
+                        <TextView
+                            android:id="@+id/textView_top3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="15dp"
+                            android:textStyle="bold"
+                            android:text="커뮤니티"
+                            android:textColor="#AAAAAA" />
+
+                        <TextView
+                            android:id="@+id/textView_top4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="15dp"
+                            android:textStyle="bold"
+                            android:text="방내놓기"
+                            android:textColor="#AAAAAA" />
+
+                        <TextView
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:id="@+id/textView_top5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="15dp"
+                            android:textStyle="bold"
+                            android:text="추천 콘텐츠"
+                            android:textColor="#AAAAAA" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+
+
+                <HorizontalScrollView
+                    android:id="@+id/HorizontalScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp">
+
+
+                    <LinearLayout
+                        android:layout_width="400dp"
+                        android:layout_height="180dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/eventbanner1"
+                            android:layout_width="409dp"
+                            android:layout_height="170dp"
+                            android:focusable="false"
+                            app:srcCompat="@drawable/banner4" />
+
+                        <ImageView
+                            android:id="@+id/eventbanner2"
+                            android:layout_width="409dp"
+                            android:layout_height="match_parent"
+                            android:focusable="false"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/banner3" />
+
+                        <ImageView
+                            android:id="@+id/eventbanner3"
+                            android:layout_width="409dp"
+                            android:layout_height="match_parent"
+                            android:focusable="false"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/banner2" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="#9E9E9E"
+                    android:layout_height="0.8dp"/>
+
+                <LinearLayout
+                    android:layout_width="409dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/btn_relAll"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="30dp"
+                            android:src="@drawable/main_icon_all"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:text="전체 매물"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/btn_rellist"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="30dp"
+                            android:src="@drawable/main_icon_oneroom"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:text="매물 보기"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/RelwriteBtn"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="30dp"
+                            android:src="@drawable/main_icon_interior"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:text="매물 등록"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/searchBtn"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="30dp"
+                            android:src="@drawable/main_icon_hobby"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:text="매물 검색"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="409dp"
+                    android:layout_height="85dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+                    <LinearLayout
+                        android:id="@+id/commuBtn"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="30dp"
+                            android:src="@drawable/main_icon_life"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="2dp"
+                            android:text="커뮤니티"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/likepageBtn"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="30dp"
+                            android:src="@drawable/main_icon_else"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginTop="3dp"
+                            android:text="찜한 방"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/newsBtn"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="30dp"
+                            android:src="@drawable/main_icon_cook"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="3dp"
+                            android:text="녹녹소식"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/mypageBtn"
+                            android:layout_width="30dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="40dp"
+                            android:src="@drawable/main_menu"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="33dp"
+                            android:layout_marginTop="3dp"
+                            android:text="더보기"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:text="오늘의 콘텐츠"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="90dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:text="바로가기"
+                        android:textColor="#8E8E8E"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="#F4F1E7"
+                    android:layout_margin="20dp"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/mainRV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:text="HOT 매물"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="#F4F1E7"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/mainRV3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:text="회원님을 위한 오늘의 추천 매물"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="#F4F1E7"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/mainRV2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/btn_inquiry"
+                        android:layout_width="160dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="40dp"
+                        android:backgroundTint="@color/gray"
+                        android:text="고객센터"
+                        android:textColor="#6E6E6E" />
+                    <Button
+                        android:id="@+id/btn_add_inquiry"
+                        android:layout_width="160dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:backgroundTint="@color/gray"
+                        android:text="광고문의"
+                        android:textColor="#6E6E6E" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- TODO: Update blank fragment layout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <!-- 하단바 -->
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:weightSum="6"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <ImageView
+                    android:id="@+id/homeTap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/bottom_hometap2" />
+
+                <ImageView
+                    android:id="@+id/tipTap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/bottom_searchtap" />
+                <ImageView
+                    android:id="@+id/relTap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/bottom_rel" />
+
+                <ImageView
+                    android:id="@+id/talkTap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/bottom_commutap" />
+
+                <ImageView
+                    android:id="@+id/bookmarkTap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/bottom_liketap" />
+
+                <ImageView
+                    android:id="@+id/storeTap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/bottom_mypagetap" />
+
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+</layout>

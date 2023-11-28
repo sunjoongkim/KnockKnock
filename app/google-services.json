@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "430976915940",
+    "project_id": "knockknock-project-20a42",
+    "storage_bucket": "knockknock-project-20a42.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:430976915940:android:5ec8350a6fa23c9dd10ff1",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAV-0AgI-Te08Tjcul3_t0XHCOXsXpnxH4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

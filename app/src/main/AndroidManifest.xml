@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="31">
+        <activity
+            android:name=".Banner_Inside"
+            android:exported="false" />
+        <activity
+            android:name=".rel_build.Rel_Random_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".board2.LikeRVAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".rel_searchview.Apart_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_searchview.Complex_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_searchview.TwoRoom_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_searchview.Office_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_searchview.OneRoom_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_searchview.Province_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_searchview.Seoul_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_searchview.Gyeongi_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_searchview.Incheon_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_searchview.SeoulActivity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_searchview.Res_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_searchview.Year_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_searchview.Month_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_build.rel_searchview"
+            android:exported="false" />
+        <activity
+            android:name=".board2.BoardInsideActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".rel_build.Complex_helth_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_build.Complex_play_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_build.Complex_convenience_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_build.Complex_shopping_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_build.Complex_cafe_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_build.Complex_Rest_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_build.Office_province_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_build.Office_incheon_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_build.Office_gyeongi_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_build.Office_seoul_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_build.Apart_province_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_build.Apart_incheon_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_build.Apart_gyeongi_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_build.Apart_seoul_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_build.OneRoom_province_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_build.OneRoom_incheon_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_build.OneRoom_gyeongi_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_build.OneRoom_seoul_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".adress.AddressSearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".board2.BoardInsideActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".board2.BoardWriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_region.Rel_Category_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".InquiryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_region.Res_province_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_region.Res_incheon_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_region.Res_gyeongi_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_region.Res_seoul_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_region.Jeonse_province_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_region.Jeonse_incheon_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_region.Jeonse_gyeongi_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_region.Jeonse_seoul_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_region.Month_province_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_region.Month_incheon_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_region.Month_gyeongi_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_region.Month_seoul_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_region.IncheonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".rel_region.SeoulActivity"
+            android:exported="false" />
+        <activity
+            android:name=".relboard.RelWriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".setting.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".board.BoardEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".board.BoardInsideActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TermActivity"
+            android:exported="false" />
+        <activity
+            android:name=".board.BoardWriteMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".contentsList.ContentShowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".contentsList.ContentsListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.JoinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.MyApplication.NoActionBar" />
+        <activity
+            android:name=".auth.IntroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BoardWriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BoardListActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>
